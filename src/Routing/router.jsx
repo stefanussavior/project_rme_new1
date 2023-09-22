@@ -5,25 +5,31 @@ import Index from "../Index";
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
 
-
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Index/>
-    },
-    {
-        path: "/login",
-        element: <Login/>
-    },
-    {
-        path: "/register",
-        element : <Register/>,
-    }
+  {
+    path: "/",
+    element: <Index />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-        <RouterProvider router={router}></RouterProvider>
-    </React.StrictMode>
-)
-
+  <React.StrictMode>
+    <RouterProvider router={router}></RouterProvider>
+  </React.StrictMode>
+);

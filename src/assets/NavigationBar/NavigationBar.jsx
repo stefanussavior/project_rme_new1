@@ -1,34 +1,33 @@
 import "./NavigationBar.css";
-import { FaBars } from 'react-icons/fa';
+import { FaBars } from "react-icons/fa";
+
+const myFunction = () => {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+};
 
 export default function NavigationBar() {
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-
-    return(
-        <>
-       <div className="topnav" id="myTopnav">
-  <a href="#home" className="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a className="icon" onClick={() => myFunction()}>
-        <FaBars/>
-  </a>
-</div>
-
-<div style= {{
-    paddingLeft: "12px"
-}}>
-  <h2>Responsive Topnav Example</h2>
-  <p>Resize the browser window to see how it works.</p>
-</div>
-        </>
-    )
+  return (
+    <>
+      <div className="topnav" id="myTopnav">
+        {/* <a href="#section1" className="active">
+          Home
+        </a> */}
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+        <div className="right-navbar">
+          <a href="/login">Login</a>
+          <a href="/register">Register</a>
+        </div>
+        <a className="icon" onClick={() => myFunction()}>
+          <FaBars />
+        </a>
+      </div>
+    </>
+  );
 }
